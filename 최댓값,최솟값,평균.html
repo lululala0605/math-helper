@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최댓값,최솟값,평균</title>
+</head>
+
+<body>
+    <style>
+        .back{  
+        
+            text-decoration: none;
+            border: solid;
+            border-width: 1px;
+            border-color: gray;
+            color:gray
+        }
+        .설명 {
+            font-size: small;
+            color: #808080;
+        }
+        #설1 {
+            margin-top: 0.5cm;
+        }
+        #설2 {
+            margin-top: -0.5cm;
+        }
+        
+        #설3 {
+            margin-top: -0.5cm;
+        }
+        .results {
+            margin-top: 0.2cm;
+            margin-left: 0.5cm;
+            font-size: 97%;
+            font-weight: 400;
+            color: black;
+        }
+
+        .button {
+            float: right;
+            margin-top: 0.2cm;
+            margin-right: 0.8cm;
+            padding: 4px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            background-color: white;
+        }
+
+        .인풋 {
+            display: inline-block;
+            width: 50px;
+            margin-left: 0.5cm;
+            margin-top: 0.25cm;
+        }
+
+        .소제목 {
+            margin-top: 4.5cm;
+            color: darkgray;
+            margin-top: 0.6cm
+        }
+
+        .표지 {
+            text-align: center;
+            color: #2c2c2c;
+            margin-top: 0.3cm;
+        }
+
+        body {
+            background-color: #F2F2F2;
+        }
+
+        .nav-distance {
+            padding: 1.2% 6.7%;
+        }
+
+        .navbar-light .navbar-toggler {
+            border-color: #F1ECEC
+        }
+
+        .navbar-light .navbar-brand {
+            font-size: 110%;
+        }
+
+        .navbar {
+            box-shadow: 5px 2px #808080;
+        }
+    </style>
+    <script>
+        function 구하기() {
+            num1 = document.getElementById("num1").value;
+            num2 = document.getElementById("num2").value;
+            num3 = document.getElementById("num3").value;
+            num4 = document.getElementById("num4").value;
+            num5 = document.getElementById("num5").value;
+            num6 = document.getElementById("num6").value;
+            num7 = document.getElementById("num7").value;
+            num8 = document.getElementById("num8").value;
+            num1 = Number(num1)
+            num2 = Number(num2)
+            num3 = Number(num3)
+            num4 = Number(num4)
+            num5 = Number(num5)
+            num6 = Number(num6)
+            num7 = Number(num7)
+            num8 = Number(num8)
+            if (num5 == 0) {
+                ans1 = Math.max(num1, num2, num3, num4)
+                ans2 = Math.min(num1, num2, num3, num4)
+                ans3 = (num1 + num2 + num3 + num4) / 4
+                document.getElementById("result").innerHTML = "최솟값은" + ans2 + "입니다";
+                document.getElementById("result1").innerHTML = "최댓값은" + ans1 + "입니다";
+                document.getElementById("result2").innerHTML = "평균값은" + ans3 + "입니다";
+            }
+            else if (num6 == 0) {
+                ans1 = Math.max(num1, num2, num3, num4, num5)
+                ans2 = Math.min(num1, num2, num3, num4, num5)
+                ans3 = (num1 + num2 + num3 + num4 + num5) / 5
+                document.getElementById("result").innerHTML = "최솟값은" + ans2 + "입니다";
+                document.getElementById("result1").innerHTML = "최댓값은" + ans1 + "입니다";
+                document.getElementById("result2").innerHTML = "평균값은" + ans3 + "입니다";
+            }
+            else if (num7 == 0) {
+                ans1 = Math.min(num1, num2, num3, num4, num5, num6)
+                ans2 = Math.max(num1, num2, num3, num4, num5, num6)
+                ans3 = (num1 + num2 + num3 + num4 + num5 + num6) / 6
+                document.getElementById("result").innerHTML = "최솟값은" + ans2 + "입니다";
+                document.getElementById("result1").innerHTML = "최댓값은" + ans1 + "입니다";
+                document.getElementById("result2").innerHTML = "평균값은" + ans3 + "입니다";
+            }
+            else if (num8 == 0) {
+                ans1 = Math.min(num1, num2, num3, num4, num5, num6, num7)
+                ans2 = Math.max(num1, num2, num3, num4, num5, num6, num7)
+                ans3 = (num1 + num2 + num3 + num4 + num5 + num6 + num7) / 7
+                document.getElementById("result").innerHTML = "최솟값은" + ans2 + "입니다";
+                document.getElementById("result1").innerHTML = "최댓값은" + ans1 + "입니다";
+                document.getElementById("result2").innerHTML = "평균값은" + ans3 + "입니다";
+            }
+            else {
+                ans1 = Math.min(num1, num2, num3, num4, num5, num6, num7, num8)
+                ans2 = Math.max(num1, num2, num3, num4, num5, num6, num7, num8)
+                ans3 = (num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8) / 8
+                document.getElementById("result").innerHTML = "최솟값은" + ans2 + "입니다";
+                document.getElementById("result1").innerHTML = "최댓값은" + ans1 + "입니다";
+                document.getElementById("result2").innerHTML = "평균값은" + ans3 + "입니다";
+            }
+
+
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-distance">
+        <a class="navbar-brand" href="#">수학 도우미</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h3 class="표지">최댓값,최솟값,평균</h3>
+    <input id="num1" class="인풋" type="number" placeholder="1">
+    <input id="num2" class="인풋" type="number" placeholder="2">
+    <input id="num3" class="인풋" type="number" placeholder="3">
+    <input id="num4" class="인풋" type="number" placeholder="4">
+    <input id="num5" class="인풋" type="number" placeholder="5">
+    <input id="num6" class="인풋" type="number" placeholder="6">
+    <input id="num7" class="인풋" type="number" placeholder="7">
+    <input id="num8" class="인풋" type="number" placeholder="8">
+    <input id="butt1" type="button" class="button rounded" value="구하기" onclick="구하기()">
+    <p id=result class=results></p>
+    <p id=result1 class=results></p>
+    <p id=result2 class=results></p>
+    <div class = 설명>
+        <div id = 설1>안하실 칸은 남겨놓으시면 됍니다</div>
+        </p>
+        <div id = 설2>4개의 수부터 가능합니다</div>
+        </p>
+        <div id = 설3>0이 있으시다면1,2,3,4중에 넣어주세요</div>
+        </p>
+    </div>
+
+</body>
+
+</html>

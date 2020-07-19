@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>도형</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-distance">
+        <a class="navbar-brand" href="#">수학 도우미</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="file:///C:/Users/crido/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%EC%88%98%ED%95%99/%EC%88%98%ED%95%993.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+
+        body{
+            background-color:#F2F2F2;
+        }
+        .인풋 {
+            width: 250px;
+            display: block;
+            margin-left: 0.5cm;
+            margin-top: 0.7cm;
+        }
+
+        #num2 {
+            float: left;
+            margin-top: 0.6cm
+        }
+        .button {
+            margin-top: 0.55cm;
+            margin-left: 0.5cm;
+            padding: 4px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            background-color: white;
+        }
+
+        .first {
+            margin-top: 1.0cm
+        }
+
+        .results {
+            margin-top: 0.5cm;
+            margin-left: 0.5cm;
+            font-weight: 400;
+            color:black;
+        }
+
+        .표지 {
+            text-align: center;
+            color: #2c2c2c;
+            margin-top: 0.3cm;
+        }
+        .nav-distance{padding: 1.2% 6.7%;}
+
+        .navbar-light .navbar-toggler {
+            border-color:#F1ECEC
+;
+        }
+
+        .navbar-light .navbar-brand{
+            font-size: 110%;
+        }
+        .navbar{box-shadow: 5px 2px #808080;}
+    </style>
+    <h3 class=표지>원의 넓이와 원주 구하기</h3>
+    <input id="num1" class="인풋" type="number" placeholder="반지름을 입력하시오">
+    <input id="num2" class="인풋" type="number" placeholder="원주율을 입력하시오">
+    <input id="butt1" class="button rounded" type="button" value="확인" onclick="확인()">
+
+    <div class=first>
+    </div>
+
+    <p id=result class = results></p>
+    <p id=result1 class = results></p>
+
+    <script>
+        function 확인() {
+            num1 = document.getElementById("num1").value;
+            num2 = document.getElementById("num2").value;
+            if (num1 == 0) {
+                document.getElementById("result").innerHTML = "0은 입력하면 안됩니다";
+                document.getElementById("result1").innerHTML = "0은 입력하면 안됩니다";
+            }
+            else if (num2 == 0) {
+                document.getElementById("result").innerHTML = "0은 입력하면 안됩니다";
+                document.getElementById("result1").innerHTML = "0은 입력하면 안됩니다";
+            }
+            else {
+                area = num1 * num1 * num2
+                document.getElementById("result").innerHTML = "넓이는 " + area + "입니다."
+                circumference = num1 + num1 * num2
+                document.getElementById("result1").innerHTML = "원주는 " + circumference + "입니다."
+            }
+        }
+    </script>
+</body>
+
+</html>

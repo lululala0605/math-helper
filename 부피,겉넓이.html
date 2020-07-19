@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부피와 겉넓이</title>
+</head>
+
+<body>
+    </nav>
+    <style>
+        .results {
+            margin-top: 0.5cm;
+            margin-left: 0.5cm;
+            font-size: 100%;
+            font-weight: 400;
+            color:black;
+        }
+        .button{
+            float: right;
+            margin-top: 0.2cm;
+            margin-right: 0.8cm;
+            padding: 4px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            background-color: white;
+        }
+        .인풋 {
+            width: 250px;
+            margin-left: 0.5cm;
+            margin-top: 0.25cm;
+        }
+        .소제목 {
+            margin-top: 4.5cm; 
+            color:darkgray;
+            margin-top:0.6cm
+        }
+        .표지 {
+            text-align: center;
+            color: #2c2c2c;
+            margin-top: 0.3cm;
+        }
+
+        body {
+            background-color: #F2F2F2;
+        }
+
+        .nav-distance {
+            padding: 1.2% 6.7%;
+        }
+
+        .navbar-light .navbar-toggler {
+            border-color: #F1ECEC
+        }
+
+        .navbar-light .navbar-brand {
+            font-size: 110%;
+        }
+
+        .navbar {
+            box-shadow: 5px 2px #808080;
+        }
+    </style>
+
+    <script>
+        function 원기둥() {
+            num1 = document.getElementById("num1").value;
+            num2 = document.getElementById("num2").value;
+            num3 = document.getElementById("num3").value;
+            ans = num1 * num1 * num3 * num2
+            ans1 = (num1 * num1 * num3 * 2) + (num1 * 2 * num3 * num2)
+            document.getElementById("result").innerHTML = "부피는" + ans + "입니다";
+            document.getElementById("result1").innerHTML = "겉넓이는" + ans1 + "입니다";
+        }
+        function 사각기둥() {
+            num1 = document.getElementById("num4").value;
+            num2 = document.getElementById("num5").value;
+            num3 = document.getElementById("num6").value;
+            ans = num1 * num2 * num3
+            ans1 = (num1 * num2 * 2) + (num1 * num3 * 2) + (num2 * num3 * 2)
+            document.getElementById("result2").innerHTML = "부피는" + ans + "입니다";
+            document.getElementById("result3").innerHTML = "겉넓이는" + ans1 + "입니다";       
+        }
+        function 원뿔() {
+            num1 = document.getElementById("num7").value;
+            num2 = document.getElementById("num8").value;
+            num3 = document.getElementById("num9").value;
+            ans = num1 * num1 * num3 * num2 / 3
+            document.getElementById("result4").innerHTML = "부피는" + ans + "입니다";       
+        }
+        function 사각뿔() {
+            num1 = document.getElementById("num10").value;
+            num2 = document.getElementById("num11").value;
+            num3 = document.getElementById("num12").value;
+            ans = num1 * num2 * num3 / 3
+            document.getElementById("result6").innerHTML = "부피는" + ans + "입니다";    
+        }
+        function 구() {
+            num1 = document.getElementById("num13").value;
+            num2 = document.getElementById("num14").value;
+            num3 = document.getElementById("num15").value;
+            ans = num1 * num1 * num3 * num2 / 3 * 2
+            document.getElementById("result8").innerHTML = "부피는" + ans + "입니다";    
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-distance">
+        <a class="navbar-brand" href="#">수학 도우미</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h3 class=표지>도형의 부피와 겉넓이</h3>
+    <h6 class=소제목>원기둥의 부피와 겉넓이</h6>
+    <input id="num1" class="인풋" type="number" placeholder="원의 반지름을 입력하시오">
+    <input id="num2" class="인풋" type="number" placeholder="원기둥의 높이를 입력하시오">
+    <input id="num3" class="인풋" type="number" placeholder="원주율을 입력하시오">
+
+    <input id="butt1" class="button rounded" type="button" value="확인" onclick="원기둥()">
+    <p id=result class = results> </p>
+    <p id=result1 class = results> </p>
+
+
+
+    <h6 class=소제목 id = 소제목1>사각기둥의 부피와 겉넓이</h6>
+    <input id="num4" class="인풋" type="number" placeholder="사각형의 변의 길이을 입력하시오">
+    <input id="num5" class="인풋" type="number" placeholder="사각형의 나머지 변의 길이을 입력하시오">
+    <input id="num6" class="인풋 버튼옆" type="number" placeholder="높이를 입력하시오">
+
+    <input id="butt1" class="button rounded" type="button" value="확인" onclick="사각기둥()">
+    <p id=result2 class = results> </p>
+    <p id=result3 class = results> </p>
+
+    <h6 class=소제목 id = 소제목2>원뿔의 부피</h6>
+    <input id="num7" class="인풋" type="number" placeholder="원의 반지름을 입력하시오">
+    <input id="num8" class="인풋" type="number" placeholder="높이를 입력하시오">
+    <input id="num9" class="인풋" type="number" placeholder="원주율을 입력하시오">
+
+    <input id="butt1" class="button rounded" type="button" value="확인" onclick="원뿔()">
+    <p id=result4 class = results> </p>
+    <p id=result5 class = results> </p>
+
+
+
+
+    <h6 class=소제목 id = 소제목3>사각뿔의 부피</h6>
+    <input id="num10" class="인풋" type="number" placeholder="사각형의 변의 길이를 입력하시오">
+    <input id="num11" class="인풋" type="number" placeholder="사각형의 나머지 변의 길이를 입력하시오">
+    <input id="num12" class="인풋" type="number" placeholder="높이를 입력하시오">
+
+    <input id="butt1" class="button rounded" type="button" value="확인" onclick="사각뿔()">
+    <p id=result6 class = results> </p>
+    <p id=result7 class = results> </p>
+
+
+
+    <h6 class=소제목 id = 소제목4>구의 부피</h6>
+    <input id="num13" class="인풋" type="number" placeholder="구의 반지름을 입력하시오">
+    <input id="num14" class="인풋" type="number" placeholder="높이를 입력하시오">
+    <input id="num15" class="인풋" type="number" placeholder="원주율을 입력하시오">
+
+    <input id="butt1" class="button rounded" type="button" value="확인" onclick="구()">
+    <p id=result8 class = results> </p>
+    <p id=result9 class = results> </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+</html>
