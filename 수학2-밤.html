@@ -115,10 +115,42 @@
         <input id="butt1" class="button rounded" type="button" value="거듭제곱" onclick="거제()">
         <input id="butt2" class="button rounded" type="button" value="최소공배수" onclick="최배()">
         <input id="butt3" class="button rounded" type="button" value="최대공약수" onclick="최약()">
+        <input id="butt4" class="button rounded" type="button" value="곱하기" onclick="곱()">
+        <input id="butt5" class="button rounded" type="button" value="나누기" onclick="나()">
+        <input id="butt6" class="button rounded" type="button" value="더하기" onclick="더()">
+        <input id="butt7" class="button rounded" type="button" value="빼기" onclick="빼()">
     </div>
     <p id=result class=results></p>
     <p id=result1 class=results></p>
     <script>
+        function 곱() {
+            숫자()
+            ans = num1 * num2
+            document.getElementById("result").innerHTML = "결과는 " + ans + "입니다."
+        }
+        function 나() {
+            숫자()
+            if (num1 == 0) {
+                document.getElementById("result").innerHTML = "0은 입력하면 안됩니다";
+            }
+            else if (num2 == 0) {
+                document.getElementById("result").innerHTML = "0은 입력하면 안됩니다";
+            }
+            else {
+                ans = num1 / num2
+                document.getElementById("result").innerHTML = "결과는 " + ans + "입니다."
+            }
+        }
+        function 더() {
+            숫자()
+            ans = num1 + num2
+            document.getElementById("result").innerHTML = "결과는 " + ans + "입니다."
+        }
+        function 빼() {
+            숫자()
+            ans = num1 - num2
+            document.getElementById("result").innerHTML = "결과는 " + ans + "입니다."
+        }
         function 숫자() {
             num1 = document.getElementById("num1").value;
             num2 = document.getElementById("num2").value;
