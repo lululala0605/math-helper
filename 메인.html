@@ -24,14 +24,20 @@
 
 <body>
     <style>
+        .tips {
+            font-size: 70%;
+            text-align: center;
+        }
         .표지 {
             text-align: center;
             color: #2c2c2c;
             margin-top: 0.3cm;
         }
-        body{
-            background-color:#F2F2F2;
+
+        body {
+            background-color: #F2F2F2;
         }
+
         .button {
             margin-top: 2cm;
             border-width: 1px;
@@ -39,21 +45,57 @@
             border-style: solid;
             border-color: gray;
             background-color: white;
-            display : block;
-            margin : 0 auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <h2 class=표지>메뉴</h2>
+    <br>
+    <br>
+    <br>
+    <input id="butt1" class="button rounded" type="button" value="숫자 2개로 하는 계산"
+        onclick=location.href="https://lululala0605.github.io/math-helper/수학2"></p>
+    <input id="butt1" class="button rounded" type="button" value="숫자 1개로 하는 계산"
+        onclick=location.href="https://lululala0605.github.io/math-helper/수학1"></p>
+    <input id="butt1" class="button rounded" type="button" value="도형의 부피와 겉넓이"
+        onclick=location.href="https://lululala0605.github.io/math-helper/부피,겉넓이"></p>
+    <input id="butt1" class="button rounded" type="button" value="    원의 원주와 넓이    "
+        onclick=location.href="https://lululala0605.github.io/math-helper/도형"></p>
+    <input id="butt1" class="button rounded" type="button" value="   최댓값,최솟값,평균   "
+        onclick=location.href="https://lululala0605.github.io/math-helper/최댓값,최솟값,평균"></p>
+    <div id=tips class="tips"></div>
+    <div id=tips1 class="tips"></div>
+    <script>
+        rannum = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+        if (rannum == 1) {
+            document.getElementById("tips").innerHTML = "Tips : 컴퓨터로 유튜브를 볼때 광고가 나오면 F5키를 누르면 광고가 사라진다";
+        }
+        else if (rannum == 2) {
+            document.getElementById("tips").innerHTML = "Tips : *23# + 번호 로 전화를 걸면 발신자 번호 표시제한이 뜬다.";
+        }
+        else if (rannum == 3) {
+            document.getElementById("tips").innerHTML = "Tips : 앱을 통해 현재 시간을 암호로 지정할 수 있다.";
+        }
+        
+        else if (rannum == 4) {
+            document.getElementById("tips").innerHTML = "Tips : SK텔레콤과 KTF는 3초 안에 전화를 끊는 사람에겐 통화료를 받지 않는다.";
+        }
+        
+        else if (rannum == 5) {
+            document.getElementById("tips").innerHTML = "Tips : (집전화)169 + 번호 로 전화를 걸면 발신자 번호 표시제한이 뜬다.";
+        }
+        
+        else if (rannum == 6) {
+            document.getElementById("tips").innerHTML = "Tips : 발신자번호 표시제한 알아내는법";
+            document.getElementById("tips1").innerHTML = "*버튼을 4초가량 누르고 종료 후 10초정도 지나고 나서 155번 전화하면 알려준다다.";
         }
 
-    </style>
-    <h2 class = 표지>메뉴</h2>
-    <br>
-    <br>
-    <br>
-    <input id="butt1" class="button rounded" type="button" value="숫자 2개로 하는 계산" onclick=location.href="https://lululala0605.github.io/math-helper/수학2"></p>
-    <input id="butt1" class="button rounded" type="button" value="숫자 1개로 하는 계산"  onclick=location.href="https://lululala0605.github.io/math-helper/수학1"></p>
-    <input id="butt1" class="button rounded" type="button" value="도형의 부피와 겉넓이"  onclick=location.href="https://lululala0605.github.io/math-helper/부피,겉넓이"></p>
-    <input id="butt1" class="button rounded" type="button" value="    원의 원주와 넓이    "  onclick=location.href="https://lululala0605.github.io/math-helper/도형"></p>
-    <input id="butt1" class="button rounded" type="button" value="   최댓값,최솟값,평균   "  onclick=location.href="https://lululala0605.github.io/math-helper/최댓값,최솟값,평균"></p>
- 
+        else if (rannum == 7) {
+            document.getElementById("tips").innerHTML = "Tips : 숙제부터 마치고 놀자";
+        }
+        
+
+    </script>
 </body>
 
 </html>

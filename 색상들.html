@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div id='rightAlign'>
+        <div id="but1">
+            <button id="button1">Click Me</button>
+            <button id="button2">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        var button1 = document.getElementById("button1");
+
+        var button2 = document.getElementById("button2");
+
+        var button1Default, button2Default;
+
+        button1Default = button1.style.backgroundColor;
+
+        button2Default = button2.style.backgroundColor;
+
+
+
+        button1.addEventListener("click", function () {
+
+            button1.style.backgroundColor = "red";
+
+            button2.style.backgroundColor = button2Default;
+
+        });
+
+
+
+        button2.addEventListener("click", function () {
+
+            button2.style.backgroundColor = "red";
+
+            button1.style.backgroundColor = button1Default;
+
+        });
+    </script>
+
+</body>
+
+</html>
