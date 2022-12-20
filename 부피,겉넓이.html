@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>부피와 겉넓이</title>
+    <title>Volume and Surface area</title>
 </head>
 
 <body>
@@ -80,27 +80,26 @@
         function 원기둥() {
             num1 = document.getElementById("num1").value;
             num2 = document.getElementById("num2").value;
-            num3 = document.getElementById("num3").value;
-            ans = num1 * num1 * num3 * num2
-            ans1 = (num1 * num1 * num3 * 2) + (num1 * 2 * num3 * num2)
-            document.getElementById("result").innerHTML = "부피는" + ans + "입니다";
-            document.getElementById("result1").innerHTML = "겉넓이는" + ans1 + "입니다";
+            ans = num1 * num1 * 3.14159265358979 * num2
+            ans1 = (num1 * num1 * 14159265358979 * 2) + (num1 * 2 * 14159265358979 * num2)
+            document.getElementById("result").innerHTML = "Volume is" + ans ;
+            document.getElementById("result1").innerHTML = "Surface area is" + ans1;
         }
+        
         function 사각기둥() {
             num1 = document.getElementById("num4").value;
             num2 = document.getElementById("num5").value;
             num3 = document.getElementById("num6").value;
             ans = num1 * num2 * num3
             ans1 = (num1 * num2 * 2) + (num1 * num3 * 2) + (num2 * num3 * 2)
-            document.getElementById("result2").innerHTML = "부피는" + ans + "입니다";
-            document.getElementById("result3").innerHTML = "겉넓이는" + ans1 + "입니다";       
+            document.getElementById("result2").innerHTML = "Volume is" + ans ;
+            document.getElementById("result3").innerHTML = "Surface area is" + ans1;    
         }
         function 원뿔() {
             num1 = document.getElementById("num7").value;
             num2 = document.getElementById("num8").value;
-            num3 = document.getElementById("num9").value;
-            ans = num1 * num1 * num3 * num2 / 3
-            document.getElementById("result4").innerHTML = "부피는" + ans + "입니다";       
+            ans = num1 * num1 * 3.14159265358979 * num2 / 3
+            document.getElementById("result4").innerHTML = "Volume is" + ans ;      
         }
         function 사각뿔() {
             num1 = document.getElementById("num10").value;
@@ -138,30 +137,28 @@
         </div>
     </nav>
     <h3 class=표지>도형의 부피와 겉넓이</h3>
-    <h6 class=소제목>원기둥의 부피와 겉넓이</h6>
-    <input id="num1" class="인풋" type="number" placeholder="원의 반지름을 입력하시오">
-    <input id="num2" class="인풋" type="number" placeholder="원기둥의 높이를 입력하시오">
-    <input id="num3" class="인풋" type="number" placeholder="원주율을 입력하시오">
+    <h6 class=소제목>Cylinder's Volume and Surface area</h6>
+    <input id="num1" class="인풋" type="number" placeholder="Enter Circle's radious">
+    <input id="num2" class="인풋" type="number" placeholder="Enter Cylinder's height">
 
-    <input id="butt1" class="button rounded" type="button" value="확인" onclick="원기둥()">
+    <input id="butt1" class="button rounded" type="button" value="Calculate" onclick="원기둥()">
     <p id=result class = results> </p>
     <p id=result1 class = results> </p>
 
 
 
-    <h6 class=소제목 id = 소제목1>사각기둥의 부피와 겉넓이</h6>
-    <input id="num4" class="인풋" type="number" placeholder="사각형의 변의 길이을 입력하시오">
-    <input id="num5" class="인풋" type="number" placeholder="사각형의 나머지 변의 길이을 입력하시오">
-    <input id="num6" class="인풋 버튼옆" type="number" placeholder="높이를 입력하시오">
+    <h6 class=소제목 id = 소제목1>Box's Volume and Surface area</h6>
+    <input id="num4" class="인풋" type="number" placeholder="Enter the length of box's side">
+    <input id="num5" class="인풋" type="number" placeholder="Enter the length of box's other side">
+    <input id="num6" class="인풋 버튼옆" type="number" placeholder="Enter the height of the box">
 
-    <input id="butt1" class="button rounded" type="button" value="확인" onclick="사각기둥()">
+    <input id="butt1" class="button rounded" type="button" value="Calculate" onclick="사각기둥()">
     <p id=result2 class = results> </p>
     <p id=result3 class = results> </p>
 
-    <h6 class=소제목 id = 소제목2>원뿔의 부피</h6>
-    <input id="num7" class="인풋" type="number" placeholder="원의 반지름을 입력하시오">
-    <input id="num8" class="인풋" type="number" placeholder="높이를 입력하시오">
-    <input id="num9" class="인풋" type="number" placeholder="원주율을 입력하시오">
+    <h6 class=소제목 id = 소제목2>Volume of the Cone</h6>
+    <input id="num7" class="인풋" type="number" placeholder="Enter circle's radious">
+    <input id="num8" class="인풋" type="number" placeholder="Enter the height of the cone">
 
     <input id="butt1" class="button rounded" type="button" value="확인" onclick="원뿔()">
     <p id=result4 class = results> </p>
