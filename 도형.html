@@ -93,10 +93,9 @@
         }
         .navbar{box-shadow: 5px 2px #808080;}
     </style>
-    <h3 class=표지>원의 넓이와 원주 구하기</h3>
-    <input id="num1" class="인풋" type="number" placeholder="반지름을 입력하시오">
-    <input id="num2" class="인풋" type="number" placeholder="원주율을 입력하시오">
-    <input id="butt1" class="button rounded" type="button" value="확인" onclick="확인()">
+    <h3 class=표지>circle's area and perimeter</h3>
+    <input id="num1" class="인풋" type="number" placeholder="Enter the radious">
+    <input id="butt1" class="button rounded" type="button" value="Calculate" onclick="확인()">
 
     <div class=first>
     </div>
@@ -107,20 +106,15 @@
     <script>
         function 확인() {
             num1 = document.getElementById("num1").value;
-            num2 = document.getElementById("num2").value;
+            num2 = 3.141592
             if (num1 == 0) {
-                document.getElementById("result").innerHTML = "0은 입력하면 안됩니다";
-                document.getElementById("result1").innerHTML = "0은 입력하면 안됩니다";
-            }
-            else if (num2 == 0) {
-                document.getElementById("result").innerHTML = "0은 입력하면 안됩니다";
-                document.getElementById("result1").innerHTML = "0은 입력하면 안됩니다";
+                document.getElementById("result").innerHTML = "Do not enter 0";
             }
             else {
                 area = num1 * num1 * num2
-                document.getElementById("result").innerHTML = "넓이는 " + area + "입니다."
-                circumference = num1 + num1 * num2
-                document.getElementById("result1").innerHTML = "원주는 " + circumference + "입니다."
+                document.getElementById("result").innerHTML = "The area is " + area
+                circumference = (num1 + num1) * num2
+                document.getElementById("result1").innerHTML = "The perimeter of the circle is " + circumference
             }
         }
     </script>
